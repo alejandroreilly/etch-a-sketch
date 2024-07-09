@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .all-container{
     display:flex;
     justify-content: center;
@@ -6,12 +12,13 @@
 
 .grid-container{
     display:flex;
-    width: 500px;
-    height: 500px;
-    flex-wrap:wrap;
+    width: 550px;
+    height: 550px;
+    flex-wrap: wrap;
     border:2px solid black;
 }
 
 .box{
-     
+    border: 1px solid black;
+    background-color: white; 
 }
