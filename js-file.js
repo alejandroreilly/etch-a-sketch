@@ -32,6 +32,14 @@ function makeGrid(numSquares){
 //call make grid function
 makeGrid(currentSize);
 
+//call the event listener for the clear button
+clearBtn.addEventListener("click", ()=>{
+    const squares = grid.querySelectorAll("div.box");
+    squares.forEach((s)=>{
+        s.style.backgroundColor = "white";
+    });
+});
+
 //call the event listener for the eraser mode
 eraserBtn.addEventListener("click", ()=>{
     if (currentMode === "eraser"){
