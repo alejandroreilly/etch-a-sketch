@@ -1,8 +1,10 @@
 const DEFAULT_COLOR = "black";
 const DEFAULT_SIZE = 16;
+const DEFAULT_MODE = "color";
 
 let currentColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_SIZE;
+let currentMode = DEFAULT_MODE;
 
 const grid = document.querySelector("#grid-container");
 //const input;
@@ -27,6 +29,14 @@ makeGrid(currentSize);
 //make event listener for all boxes when hovering
 grid.addEventListener("mouseover", (e)=>{
     if(e.target.classList.contains("box")){
-        e.target.style.backgroundColor = currentColor;
+
+        //if on color mode, turn it to current chosen color
+        if(currentMode === "color"){
+            e.target.style.backgroundColor = currentColor;
+        }
+        else if(currentMode === "eraser"){
+            //if on eraser, make it white
+            e.target.style.backgroundColor = "white";
+        }
     }
 });
