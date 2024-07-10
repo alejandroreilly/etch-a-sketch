@@ -29,8 +29,19 @@ function makeGrid(numSquares){
     }
 }
 
+function randomRGB(){
+    let rgb1 = Math.floor(Math.random()*256);
+    let rgb2 = Math.floor(Math.random()*256);
+    let rgb3 = Math.floor(Math.random()*256);
+    return String(`rgb(${rgb1},${rgb2},${rgb3})`);
+}
 //call make grid function
 makeGrid(currentSize);
+
+//call rainbowMode event listener
+rainbowBtn.addEventListener("click",()=>{
+    currentMode="rainbow";
+})
 
 //call the event listener for the clear button
 clearBtn.addEventListener("click", ()=>{
@@ -42,14 +53,7 @@ clearBtn.addEventListener("click", ()=>{
 
 //call the event listener for the eraser mode
 eraserBtn.addEventListener("click", ()=>{
-    if (currentMode === "eraser"){
-        currentMode = "color";
-        eraserBtn.textContent="Eraser Mode: OFF";
-    }
-    else{
-        currentMode = "eraser";
-        eraserBtn.textContent="Eraser Mode: ON";
-    }
+    currentMode = "eraser";
 })
 
 //call the event listener for toggleGrid
@@ -83,6 +87,9 @@ grid.addEventListener("mouseover", (e)=>{
         else if(currentMode === "eraser"){
             //if on eraser, make it white
             e.target.style.backgroundColor = "white";
+        }
+        else if(currentMode==="rainbow"){
+            e.target.style.backgroundColor = randomRGB();
         }
     }
 });
