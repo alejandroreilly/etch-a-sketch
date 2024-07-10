@@ -26,7 +26,6 @@
 }
 
 button{
-    margin: 16px;
     padding: 8px;
     color: yellow;
     background-color: purple;
@@ -34,16 +33,27 @@ button{
     border-radius: 8px;
     font-family: 'Silkscreen';
     font-weight: 700;
+    width: 200px;
 }
 
 h1{
     font-family: 'Silkscreen';
+    font-size: 64px;
+    margin: 36px;
+}
 
+.toolbar-and-grid{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
 }
 
 .button-container{
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 72px;
 }
