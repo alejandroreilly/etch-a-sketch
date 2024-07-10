@@ -13,7 +13,7 @@ const rainbowBtn = document.getElementById("rainbow");
 const toggleGridBtn = document.getElementById("toggle-grid");
 const eraserBtn = document.getElementById("eraser");
 const clearBtn = document.getElementById("clear");
-
+const colorPicker = document.getElementById("color-picker");
 
 //make the grid with white backgrounds
 function makeGrid(numSquares){
@@ -29,12 +29,17 @@ function makeGrid(numSquares){
     }
 }
 
+//get random RGB for rainbow function
 function randomRGB(){
     let rgb1 = Math.floor(Math.random()*256);
     let rgb2 = Math.floor(Math.random()*256);
     let rgb3 = Math.floor(Math.random()*256);
     return String(`rgb(${rgb1},${rgb2},${rgb3})`);
 }
+
+//eventListener for color picker
+
+
 //call make grid function
 makeGrid(currentSize);
 
@@ -60,6 +65,7 @@ clearBtn.addEventListener("click", ()=>{
 eraserBtn.addEventListener("click", ()=>{
     currentMode = "eraser";
 })
+
 
 //call the event listener for toggleGrid
 toggleGridBtn.addEventListener("click",()=>{
