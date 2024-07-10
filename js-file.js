@@ -6,8 +6,14 @@ let currentColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_SIZE;
 let currentMode = DEFAULT_MODE;
 
+//set up querySelectors
 const grid = document.querySelector("#grid-container");
-//const input;
+const colorBtn = document.getElementById("color");
+const rainbowBtn = document.getElementById("rainbow");
+const toggleGridBtn = document.getElementById("toggle-grid");
+const eraserBtn = document.getElementById("eraser");
+const clearBtn = document.getElementById("clear");
+
 
 //make the grid with white backgrounds
 function makeGrid(numSquares){
