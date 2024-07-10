@@ -43,6 +43,11 @@ rainbowBtn.addEventListener("click",()=>{
     currentMode="rainbow";
 })
 
+//make event listener for color mode button
+colorBtn.addEventListener("click", ()=>{
+    currentMode = "color";
+})
+
 //call the event listener for the clear button
 clearBtn.addEventListener("click", ()=>{
     const squares = grid.querySelectorAll("div.box");
