@@ -30,6 +30,9 @@ function makeGrid(numSquares){
     }
 }
 
+//call make grid function for initial size
+makeGrid(currentSize);
+
 //get random RGB for rainbow function
 function randomRGB(){
     let rgb1 = Math.floor(Math.random()*256);
@@ -38,13 +41,19 @@ function randomRGB(){
     return String(`rgb(${rgb1},${rgb2},${rgb3})`);
 }
 
+//event listener for input slider
+sizeSlider.addEventListener('change', (e)=>{
+    currentSize=e.target.value;
+    const squares = grid.querySelectorAll("div.box");
+    squares.forEach((s)=>{
+        s.remove();
+    })
+    makeGrid(currentSize);
+})
 //eventListener for color picker
 colorPicker.addEventListener('change',(e)=>{
     currentColor = e.target.value;
 })
-
-//call make grid function
-makeGrid(currentSize);
 
 //call rainbowMode event listener
 rainbowBtn.addEventListener("click",()=>{
