@@ -14,6 +14,7 @@ const toggleGridBtn = document.getElementById("toggle-grid");
 const eraserBtn = document.getElementById("eraser");
 const clearBtn = document.getElementById("clear");
 const colorPicker = document.getElementById("color-picker");
+const sizeSlider = document.getElementById("range");
 
 //make the grid with white backgrounds
 function makeGrid(numSquares){

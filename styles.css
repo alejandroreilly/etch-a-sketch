@@ -105,4 +105,5 @@ input.color{
 
 input#range{
     width: 200px;
+    accent-color: purple;
 }
