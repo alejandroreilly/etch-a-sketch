@@ -38,7 +38,9 @@ function randomRGB(){
 }
 
 //eventListener for color picker
-
+colorPicker.addEventListener('change',(e)=>{
+    currentColor = e.target.value;
+})
 
 //call make grid function
 makeGrid(currentSize);
