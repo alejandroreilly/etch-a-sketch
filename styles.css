@@ -107,3 +107,9 @@ input#range{
     width: 200px;
     accent-color: purple;
 }
+
+.current-mode{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
