@@ -15,6 +15,7 @@ const eraserBtn = document.getElementById("eraser");
 const clearBtn = document.getElementById("clear");
 const colorPicker = document.getElementById("color-picker");
 const sizeSlider = document.getElementById("range");
+const sliderText = document.getElementById("slider-text");
 
 //make the grid with white backgrounds
 function makeGrid(numSquares){
@@ -49,6 +50,7 @@ sizeSlider.addEventListener('change', (e)=>{
         s.remove();
     })
     makeGrid(currentSize);
+    sliderText.textContent=`${currentSize}x${currentSize}`;
 })
 //eventListener for color picker
 colorPicker.addEventListener('change',(e)=>{
