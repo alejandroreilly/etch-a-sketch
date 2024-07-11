@@ -16,6 +16,7 @@ const clearBtn = document.getElementById("clear");
 const colorPicker = document.getElementById("color-picker");
 const sizeSlider = document.getElementById("range");
 const sliderText = document.getElementById("slider-text");
+const emoji = document.getElementById("emoji");
 
 //make the grid with white backgrounds
 function makeGrid(numSquares){
@@ -30,6 +31,10 @@ function makeGrid(numSquares){
         }
     }
 }
+// ----EMOJI LIST-----
+//pen: &#128397
+//rainbow: &#127752
+//eraser: &#128465
 
 //call make grid function for initial size
 makeGrid(currentSize);
@@ -60,11 +65,13 @@ colorPicker.addEventListener('change',(e)=>{
 //call rainbowMode event listener
 rainbowBtn.addEventListener("click",()=>{
     currentMode="rainbow";
+    emoji.textContent="🌈";
 })
 
 //make event listener for color mode button
 colorBtn.addEventListener("click", ()=>{
     currentMode = "color";
+    emoji.textContent="🖍️";
 })
 
 //call the event listener for the clear button
@@ -78,6 +85,7 @@ clearBtn.addEventListener("click", ()=>{
 //call the event listener for the eraser mode
 eraserBtn.addEventListener("click", ()=>{
     currentMode = "eraser";
+    emoji.textContent="🗑️";
 })
 
 

@@ -112,4 +112,11 @@ input#range{
     display:flex;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    gap: 8px;
+}
+
+.current-mode p{
+    font-family:'Silkscreen';
+
 }
