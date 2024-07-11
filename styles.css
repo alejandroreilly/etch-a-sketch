@@ -69,7 +69,7 @@ h1{
 
 .top-toolbar{
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -92,3 +92,17 @@ input.color{
     margin: 0px;
 }
 
+.size-slider p{
+    font-family: 'Silkscreen';
+}
+
+.size-slider{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input#range{
+    width: 200px;
+}
